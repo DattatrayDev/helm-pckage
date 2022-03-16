@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  my-application:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-03-16T23:25:55.327052+05:30"
+    description: A Helm chart for Kubernetes
+    digest: f6ad284f620e9d16152b27830c127223b57197f0f02ed612bccbc4b4856a9af4
+    name: my-application
+    type: application
+    urls:
+    - https://github.com/DattatrayDev/helm-pckage.git/my-application-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-16T23:25:55.326091687+05:30"
