@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: dattatrayd/frontend-app
+  pullPolicy: IfNotPresent
+  tag: ""
