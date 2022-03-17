@@ -9,12 +9,11 @@ pipeline {
 	    stage("Deploy") {
                         steps {
 				kubernetesDeploy(
-                configs:"index.yaml",
-                kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG',
-                enableConfigSubstitution: true
-                )
-                       sh "helm install helm-package my-application"
-                    }
+                                   configs: 'index.yaml' ,
+                                   kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG' ,
+                                   enableConfigSubstitution: true 
+				)
+			}
               }
     }
 }
