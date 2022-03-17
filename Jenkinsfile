@@ -8,7 +8,7 @@ pipeline {
         }
 	    stage("Deploy") {
                         steps {
-				sh "helm install helm-pckage my-application"
+				sh "helm install sample-application ./my-application"
 				
 			}
               }
