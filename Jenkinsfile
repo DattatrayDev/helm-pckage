@@ -1,7 +1,5 @@
 pipeline {
-    agent{
-	  label 'helm'
-    }
+    agent any
     stages {
         stage('add repo') {
             steps {
