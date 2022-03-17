@@ -9,7 +9,6 @@ pipeline {
 	    stage("Deploy") {
                         steps {
 				sh "helm install sample-application ."
-				
 			}
               }
     }
