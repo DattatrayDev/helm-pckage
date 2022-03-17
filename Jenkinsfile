@@ -6,7 +6,7 @@ pipeline {
 		    sh "helm repo add helm-pckage https://dattatraydev.github.io/helm-pckage/"
             }
         }
-	    stage("Deploy") {
+	 stage("Deploy") {
                         steps {
 		          sh "helm istall sample-application ."
 			}
