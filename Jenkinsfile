@@ -8,9 +8,7 @@ pipeline {
         }
 	    stage("Deploy") {
                         steps {
-				kubernetesDeploy(
-                                   configs: 'index.yaml' ,
-                                   kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG' ,
+				sh "helm install helm-package my-application"
 				)
 			}
               }
