@@ -11,7 +11,6 @@ pipeline {
 				kubernetesDeploy(
                                    configs: 'index.yaml' ,
                                    kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG' ,
-                                   enableConfigSubstitution: true 
 				)
 			}
               }
