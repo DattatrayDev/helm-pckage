@@ -1,20 +1,13 @@
+def repo="https://dattatraydev.github.io/helm-pckage/"
 pipeline {
     agent any
 
     stages {
         stage('add repo') {
             steps {
-                sh 'https://github.com/DattatrayDev/helm-pckage.git'
+		    sh "helm repo add helm-packahe ${repo}"
             }
         }
-         stage('Deploy') 
-	{
-        steps {
-          kubernetesDeploy(
-            kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG',
-            enableConfigSubstitution: true
-          )
-        }
-    }
-}
+         
+
 }
