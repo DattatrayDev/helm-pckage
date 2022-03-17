@@ -6,8 +6,13 @@ pipeline {
 		    sh "helm repo add helm-package https://dattatraydev.github.io/helm-pckage/"
             }
         }
-	    stage("Deploy to Dev") {
+	    stage("Deploy") {
                         steps {
+				kubernetesDeploy(
+                configs:"index.yaml",
+                kubeconfigId: 'KUBERNETES_CLUSTER_CONFIG',
+                enableConfigSubstitution: true
+                )
                        sh "helm install helm-package my-application"
                     }
               }
