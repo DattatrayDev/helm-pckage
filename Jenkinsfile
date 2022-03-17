@@ -6,5 +6,10 @@ pipeline {
 		    sh "helm repo add helm-package https://dattatraydev.github.io/helm-pckage/"
             }
         }
+	    stage("Deploy to Dev") {
+                        steps {
+                       sh "helm install helm-package my-application"
+                    }
+              }
     }
 }
