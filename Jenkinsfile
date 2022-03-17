@@ -3,13 +3,8 @@ pipeline {
     stages {
         stage('add repo') {
             steps {
-		    sh "helm repo add helm-pckage https://dattatraydev.github.io/helm-pckage/"
+		    sh "helm install sample application ."
             }
         }
-	 stage("Deploy") {
-                        steps {
-		          sh "helm install sample-application ."
-			}
-              }
     }
 }
