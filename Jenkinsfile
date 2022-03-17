@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('add repo') {
             steps {
-                sh 'https://dattatraydev.github.io/helm-pckage/'
+                sh 'https://github.com/DattatrayDev/helm-pckage.git'
             }
         }
          stage('Deploy') 
