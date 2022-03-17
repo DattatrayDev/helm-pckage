@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('add repo') {
             steps {
-		    sh "helm install sample application ."
+		    sh "helm install sample-application ."
             }
         }
     }
