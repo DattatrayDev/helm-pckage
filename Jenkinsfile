@@ -9,7 +9,7 @@ pipeline {
 	    stage("Deploy") {
                         steps {
 				sh "helm install helm-package my-application"
-				)
+				
 			}
               }
     }
