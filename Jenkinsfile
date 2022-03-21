@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('add repo') {
+        stage('minikube') {
             steps {
-		    sh "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml"
-		    sh "helm install sample-application ."
+		    sh "minikube start"
+		    sh "helm install sample ."
+		    sh "minikube service myapp-service"
             }
         }
     }
