@@ -16,4 +16,4 @@ spec:
       - name: myfrontend
         image: {{ .Values.image.repository }}
         ports:
-        - containerPort: 8097
+        - containerPort: 80
