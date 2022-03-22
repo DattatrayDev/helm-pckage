@@ -4,8 +4,16 @@ pipeline {
         stage('minikube') {
             steps {
 		    sh "minikube start"
+            }
+        }
+	    stage('install') {
+            steps {
 		    sh "helm install sample ."
-		    sh "minikube service myapp-service"
+            }
+        }
+	    stage('url') {
+            steps {
+		    sh "minikube service myapp-service --url"
             }
         }
     }
